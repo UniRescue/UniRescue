@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Thuê ChatGPT Plus, Claude Pro, Gemini Advanced theo tháng, không cần thẻ quốc tế.">
+  <meta name="theme-color" content="#ffffff">
+  <title>Thuê tài khoản AI — UniRescue</title>
+
+  <!-- Favicon Logo UniSOS -->
+  <link rel="icon" type="image/png" href="icon.png">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: { sans: ['Inter', 'ui-sans-serif', 'system-ui', 'sans-serif'] },
+          maxWidth: { content: '1200px' },
+          boxShadow: {
+            hair: '0 1px 3px rgba(15, 23, 42, .06)',
+            lift: '0 18px 40px -26px rgba(15, 23, 42, .45)'
+          }
+        }
+      }
+    };
+  </script>
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="font-sans antialiased">
+
+  <div id="scroll-progress" aria-hidden="true"></div>
+
+
+  <!-- ============ ICON SPRITE (Lucide) ============ -->
+  <svg xmlns="http://www.w3.org/2000/svg" class="hidden" aria-hidden="true" focusable="false">
+    <symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10Z"/><path d="m9 11.5 2 2 4-4"/></symbol>
+    <symbol id="i-bag" viewBox="0 0 24 24"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z"/><path d="M3 6h18"/><path d="M16 10a4 4 0 0 1-8 0"/></symbol>
+    <symbol id="i-search" viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></symbol>
+    <symbol id="i-menu" viewBox="0 0 24 24"><path d="M4 6h16M4 12h16M4 18h16"/></symbol>
+    <symbol id="i-x" viewBox="0 0 24 24"><path d="M18 6 6 18M6 6l12 12"/></symbol>
+    <symbol id="i-plus" viewBox="0 0 24 24"><path d="M5 12h14M12 5v14"/></symbol>
+    <symbol id="i-minus" viewBox="0 0 24 24"><path d="M5 12h14"/></symbol>
+    <symbol id="i-check" viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></symbol>
+    <symbol id="i-arrow-right" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></symbol>
+    <symbol id="i-arrow-up-right" viewBox="0 0 24 24"><path d="M7 17 17 7M7 7h10v10"/></symbol>
+    <symbol id="i-info" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4M12 8h.01"/></symbol>
+    <symbol id="i-wrench" viewBox="0 0 24 24"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></symbol>
+    <symbol id="i-sparkles" viewBox="0 0 24 24"><path d="m12 3-1.9 5.8a2 2 0 0 1-1.3 1.3L3 12l5.8 1.9a2 2 0 0 1 1.3 1.3L12 21l1.9-5.8a2 2 0 0 1 1.3-1.3L21 12l-5.8-1.9a2 2 0 0 1-1.3-1.3Z"/></symbol>
+    <symbol id="i-laptop" viewBox="0 0 24 24"><path d="M20 16V7a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v9m16 0H4m16 0 1.28 2.55a1 1 0 0 1-.9 1.45H3.62a1 1 0 0 1-.9-1.45L4 16"/></symbol>
+    <symbol id="i-battery" viewBox="0 0 24 24"><path d="M15 7h1a2 2 0 0 1 2 2v6a2 2 0 0 1-2 2h-2"/><path d="M6 7H4a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2h1"/><path d="m11 7-3 5h4l-3 5"/><path d="M22 11v2"/></symbol>
+    <symbol id="i-cpu" viewBox="0 0 24 24"><rect x="4" y="4" width="16" height="16" rx="2"/><rect x="9" y="9" width="6" height="6"/><path d="M15 2v2M15 20v2M2 15h2M2 9h2M20 15h2M20 9h2M9 2v2M9 20v2"/></symbol>
+    <symbol id="i-trash" viewBox="0 0 24 24"><path d="M3 6h18"/><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6"/><path d="M8 6V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/></symbol>
+    <symbol id="i-bot" viewBox="0 0 24 24"><path d="M12 8V4H8"/><rect x="4" y="8" width="16" height="12" rx="2"/><path d="M2 14h2M20 14h2M15 13v2M9 13v2"/></symbol>
+  </svg>
+
+  <!-- ============ HEADER ============ -->
+  <header id="site-header" class="sticky top-0 z-40 border-b border-slate-200/70 bg-white/85 backdrop-blur-md transition-shadow duration-300">
+    <div class="mx-auto flex h-16 max-w-content items-center justify-between gap-4 px-5 sm:px-8">
+
+      <a href="index.html" class="group flex items-center gap-2.5 transition-transform duration-300 hover:scale-[1.02]">
+        <img src="icon.png" alt="UniSOS Logo" class="h-10 w-10 object-contain transition-transform duration-300 group-hover:rotate-6">
+        <span class="text-[17px] font-semibold tracking-[-0.02em] text-slate-900">UniRescue</span>
+      </a>
+
+      <nav class="hidden items-center gap-1 md:flex" aria-label="Điều hướng chính">
+        <a class="nav-link" href="thiet-bi.html">Thiết bị</a>
+        <a class="nav-link" href="sua-laptop.html">Sửa laptop</a>
+        <a class="nav-link" href="tai-khoan-ai.html">Tài khoản AI</a>
+        <a class="nav-link" href="cach-muon.html">Cách mượn</a>
+        <a class="nav-link" href="ve-nhom.html">Về nhóm</a>
+        <a class="nav-link" href="lien-he.html">Liên hệ</a>
+      </nav>
+
+      <div class="flex items-center gap-1.5">
+        <button type="button" id="cart-open" aria-haspopup="dialog" aria-controls="cart-root"
+                class="inline-flex items-center gap-2 rounded-[10px] border border-slate-200 px-3 py-2 text-[13px] font-medium text-slate-700 transition-all duration-300 hover:-translate-y-0.5 hover:border-slate-300 hover:bg-slate-50 hover:shadow-sm">
+          <svg class="h-[18px] w-[18px]" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#i-bag"/></svg>
+          <span class="hidden sm:inline">Giỏ thuê</span>
+          <span id="cart-badge" class="inline-flex h-5 min-w-[20px] items-center justify-center rounded-full bg-indigo-600 px-1.5 text-[11px] font-semibold leading-none text-white transition-transform duration-300 hover:scale-110">0</span>
+          <span class="sr-only" id="cart-badge-sr">0 thiết bị trong giỏ</span>
+        </button>
+
+        <button type="button" id="menu-toggle" aria-expanded="false" aria-controls="mobile-menu"
+                class="-mr-1 rounded-[10px] p-2 text-slate-600 transition-colors duration-200 hover:bg-slate-100 md:hidden">
+          <span class="sr-only">Mở menu</span>
+          <svg class="h-[20px] w-[20px]" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#i-menu"/></svg>
+        </button>
+      </div>
+    </div>
+
+    <div id="mobile-menu" class="hidden border-t border-slate-200/70 bg-white px-5 pb-4 pt-2 md:hidden">
+      <nav aria-label="Điều hướng di động" class="grid gap-1 text-[14px] font-medium text-slate-700">
+        <a href="thiet-bi.html" class="rounded-lg px-3 py-2.5 transition-colors duration-150 hover:bg-slate-50 hover:text-indigo-600">Thiết bị</a>
+        <a href="sua-laptop.html" class="rounded-lg px-3 py-2.5 transition-colors duration-150 hover:bg-slate-50 hover:text-indigo-600">Sửa laptop</a>
+        <a href="tai-khoan-ai.html" class="rounded-lg px-3 py-2.5 transition-colors duration-150 hover:bg-slate-50 hover:text-indigo-600">Tài khoản AI</a>
+        <a href="cach-muon.html" class="rounded-lg px-3 py-2.5 transition-colors duration-150 hover:bg-slate-50 hover:text-indigo-600">Cách mượn</a>
+        <a href="ve-nhom.html" class="rounded-lg px-3 py-2.5 transition-colors duration-150 hover:bg-slate-50 hover:text-indigo-600">Về nhóm</a>
+        <a href="lien-he.html" class="rounded-lg px-3 py-2.5 transition-colors duration-150 hover:bg-slate-50 hover:text-indigo-600">Liên hệ</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="top">
+
+    <section class="relative isolate overflow-hidden border-b border-slate-200/70">
+      <div class="hero-aurora" aria-hidden="true"><span class="a1"></span><span class="a2"></span><span class="a3"></span></div>
+      <div class="hero-grid" aria-hidden="true"></div>
+      <div class="relative mx-auto max-w-content px-5 pb-10 pt-10 sm:px-8 lg:pb-14 lg:pt-14">
+        <nav aria-label="Breadcrumb" class="text-[12.5px] text-slate-400">
+          <a href="index.html" class="link-underline transition-colors duration-200 hover:text-indigo-600">Trang chủ</a>
+          <span class="mx-1.5" aria-hidden="true">/</span><span class="text-slate-600" aria-current="page">Tài khoản AI</span>
+        </nav>
+        <h1 class="mt-4 max-w-[22ch] text-[32px] font-semibold leading-[1.08] tracking-[-0.035em] text-slate-900 sm:text-[42px]">Tài khoản AI cho mùa thi và đồ án</h1>
+        <p class="mt-4 max-w-[58ch] text-[15px] leading-[1.65] text-slate-600">Dùng bản trả phí của các trợ lý AI phổ biến, chỉ trả theo tháng.</p>
+      </div>
+    </section>
+
+    <!-- Giá thuê: tìm "SỬA GIÁ" để chỉnh giá từng gói -->
+    <section id="ai-accounts" class="relative isolate overflow-hidden border-b border-slate-200/70">
+      <div class="ai-glow" aria-hidden="true"></div>
+      <div class="mx-auto max-w-content px-5 py-14 sm:px-8 lg:py-20">
+        <div class="reveal-on-scroll flex flex-wrap items-end justify-between gap-x-8 gap-y-4">
+          <div class="max-w-[58ch]">
+            <span class="inline-flex items-center gap-1.5 rounded-full border border-indigo-200 bg-indigo-50 px-2.5 py-1 text-[11.5px] font-medium text-indigo-700">
+              <svg class="h-3.5 w-3.5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#i-bot"/></svg>
+              Dịch vụ mới
+            </span>
+            <h2 class="mt-3 text-[24px] font-semibold tracking-[-0.025em] text-slate-900 sm:text-[28px]">Thuê tài khoản AI</h2>
+            <p class="mt-2.5 text-[14.5px] leading-relaxed text-slate-500">
+              Dùng bản trả phí của ChatGPT, Claude hay Gemini cho mùa thi, đồ án hoặc luận văn — chỉ trả theo tháng, không cần thẻ quốc tế.
+            </p>
+          </div>
+          <p class="text-[12.5px] text-slate-400">Giao tài khoản qua email sau khi xác nhận.</p>
+        </div>
+
+        <div class="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+        <div class="reveal-on-scroll h-full" style="transition-delay:0ms">
+          <article class="card ai-card h-full p-5" data-ai-plan="chatgpt">
+            <div class="flex items-center gap-3">
+              <span class="ai-mono ai-mono--gpt" aria-hidden="true">GPT</span>
+              <div>
+                <h3 class="text-[15px] font-semibold leading-snug text-slate-900">ChatGPT Plus</h3>
+                <p class="text-[12px] text-slate-400">OpenAI</p>
+              </div>
+            </div>
+            <p class="mt-3 text-[13px] leading-relaxed text-slate-500">Viết, tóm tắt tài liệu, giải bài tập và hỗ trợ lập trình hằng ngày.</p>
+            <ul class="mt-4 flex-1 space-y-2 text-[12.5px] text-slate-600">
+              <li class="flex items-start gap-2"><svg class="mt-0.5 h-3.5 w-3.5 shrink-0 text-indigo-500" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#i-check"/></svg>Model mới nhất của OpenAI</li>
+              <li class="flex items-start gap-2"><svg class="mt-0.5 h-3.5 w-3.5 shrink-0 text-indigo-500" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#i-check"/></svg>Phân tích file, ảnh &amp; dữ liệu</li>
+              <li class="flex items-start gap-2"><svg class="mt-0.5 h-3.5 w-3.5 shrink-0 text-indigo-500" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#i-check"/></svg>Tạo ảnh và trợ lý giọng nói</li>
+            </ul>
+            <div class="mt-5 flex items-end justify-between gap-3 border-t border-slate-200/70 pt-3">
+              <p class="leading-tight">
+                <span class="block text-[12px] text-slate-400">Giá thuê</span>
+                <!-- SỬA GIÁ ChatGPT Plus Ở ĐÂY -->
+                <span class="text-[15px] font-semibold tabular-nums text-slate-900">xx.000đ</span><span class="ml-0.5 text-[12px] text-slate-400">/ tháng</span>
+              </p>
+              <button type="button" class="card-cta" data-ai="ChatGPT Plus">Đăng ký thuê<span class="sr-only"> — ChatGPT Plus</span></button>
+            </div>
+          </article>
+        </div>
+        <div class="reveal-on-scroll h-full" style="transition-delay:90ms">
+          <article class="card ai-card h-full p-5" data-ai-plan="claude">
+            <div class="flex items-center gap-3">
+              <span class="ai-mono ai-mono--claude" aria-hidden="true">C</span>
+              <div>
+                <h3 class="text-[15px] font-semibold leading-snug text-slate-900">Claude Pro</h3>
+                <p class="text-[12px] text-slate-400">Anthropic</p>
+              </div>
+            </div>
+            <p class="mt-3 text-[13px] leading-relaxed text-slate-500">Đọc tài liệu dài, viết luận văn, review và giải thích code chi tiết.</p>
+            <ul class="mt-4 flex-1 space-y-2 text-[12.5px] text-slate-600">
+              <li class="flex items-start gap-2"><svg class="mt-0.5 h-3.5 w-3.5 shrink-0 text-indigo-500" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#i-check"/></svg>Model Claude mới nhất</li>
+              <li class="flex items-start gap-2"><svg class="mt-0.5 h-3.5 w-3.5 shrink-0 text-indigo-500" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#i-check"/></svg>Xử lý tài liệu, PDF dài</li>
+              <li class="flex items-start gap-2"><svg class="mt-0.5 h-3.5 w-3.5 shrink-0 text-indigo-500" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#i-check"/></svg>Projects để quản lý môn học</li>
+            </ul>
+            <div class="mt-5 flex items-end justify-between gap-3 border-t border-slate-200/70 pt-3">
+              <p class="leading-tight">
+                <span class="block text-[12px] text-slate-400">Giá thuê</span>
+                <!-- SỬA GIÁ Claude Pro Ở ĐÂY -->
+                <span class="text-[15px] font-semibold tabular-nums text-slate-900">xx.000đ</span><span class="ml-0.5 text-[12px] text-slate-400">/ tháng</span>
+              </p>
+              <button type="button" class="card-cta" data-ai="Claude Pro">Đăng ký thuê<span class="sr-only"> — Claude Pro</span></button>
+            </div>
+          </article>
+        </div>
+        <div class="reveal-on-scroll h-full" style="transition-delay:180ms">
+          <article class="card ai-card h-full p-5" data-ai-plan="gemini">
+            <div class="flex items-center gap-3">
+              <span class="ai-mono ai-mono--gemini" aria-hidden="true">G</span>
+              <div>
+                <h3 class="text-[15px] font-semibold leading-snug text-slate-900">Gemini Advanced</h3>
+                <p class="text-[12px] text-slate-400">Google</p>
+              </div>
+            </div>
+            <p class="mt-3 text-[13px] leading-relaxed text-slate-500">Tích hợp Google Docs, Gmail, Drive — tiện cho làm việc nhóm.</p>
+            <ul class="mt-4 flex-1 space-y-2 text-[12.5px] text-slate-600">
+              <li class="flex items-start gap-2"><svg class="mt-0.5 h-3.5 w-3.5 shrink-0 text-indigo-500" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#i-check"/></svg>Model Gemini mới nhất</li>
+              <li class="flex items-start gap-2"><svg class="mt-0.5 h-3.5 w-3.5 shrink-0 text-indigo-500" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#i-check"/></svg>Kết nối hệ sinh thái Google</li>
+              <li class="flex items-start gap-2"><svg class="mt-0.5 h-3.5 w-3.5 shrink-0 text-indigo-500" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#i-check"/></svg>Kèm dung lượng lưu trữ Google One</li>
+            </ul>
+            <div class="mt-5 flex items-end justify-between gap-3 border-t border-slate-200/70 pt-3">
+              <p class="leading-tight">
+                <span class="block text-[12px] text-slate-400">Giá thuê</span>
+                <!-- SỬA GIÁ Gemini Advanced Ở ĐÂY -->
+                <span class="text-[15px] font-semibold tabular-nums text-slate-900">xx.000đ</span><span class="ml-0.5 text-[12px] text-slate-400">/ tháng</span>
+              </p>
+              <button type="button" class="card-cta" data-ai="Gemini Advanced">Đăng ký thuê<span class="sr-only"> — Gemini Advanced</span></button>
+            </div>
+          </article>
+        </div>
+        </div>
+      </div>
+    </section>
+
+    
+    <section class="">
+      <div class="mx-auto grid max-w-content gap-8 px-5 py-14 sm:px-8 lg:grid-cols-12 lg:gap-16 lg:py-20">
+        <div class="reveal-on-scroll lg:col-span-4"><h2 class="text-[24px] font-semibold tracking-[-0.025em] text-slate-900 sm:text-[28px]">Câu hỏi thường gặp</h2></div>
+        <div class="reveal-on-scroll border-t border-slate-200/70 lg:col-span-8"><details class="faq"><summary>Tôi nhận tài khoản bằng cách nào?<svg class="h-4 w-4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#i-plus"/></svg></summary><p>Sau khi nhóm xác nhận yêu cầu, thông tin tài khoản được gửi qua email.</p></details><details class="faq"><summary>Có cần thẻ quốc tế không?<svg class="h-4 w-4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#i-plus"/></svg></summary><p>Không. Bạn chỉ cần đăng ký thuê theo tháng với nhóm.</p></details><details class="faq"><summary>Tôi cần lưu ý gì khi sử dụng?<svg class="h-4 w-4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#i-plus"/></svg></summary><p>Chỉ dùng cho mục đích học tập, không đổi thông tin đăng nhập và không chia sẻ lại cho người khác.</p></details><details class="faq"><summary>Giá thuê là bao nhiêu?<svg class="h-4 w-4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#i-plus"/></svg></summary><p>Giá từng gói sẽ được nhóm cập nhật; bấm "Đăng ký thuê" để hỏi giá và đăng ký.</p></details></div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="border-t border-slate-200/70 bg-white">
+    <div class="mx-auto flex max-w-content flex-col gap-6 px-5 py-8 sm:px-8 md:flex-row md:items-center md:justify-between">
+      <div class="flex items-center gap-2.5">
+        <img src="icon.png" alt="UniSOS Logo" class="h-8 w-8 object-contain transition-transform duration-300 hover:scale-110">
+        <p class="text-[12.5px] leading-relaxed text-slate-500">
+          <span class="font-medium text-slate-700">UniRescue</span> — Dịch vụ thuê thiết bị học tập.
+        </p>
+      </div>
+
+      <nav class="flex flex-wrap items-center gap-x-5 gap-y-2 text-[12.5px] text-slate-500" aria-label="Liên kết chân trang">
+        <a href="thiet-bi.html" class="link-underline transition-colors duration-200 hover:text-indigo-600">Thiết bị</a>
+        <a href="sua-laptop.html" class="link-underline transition-colors duration-200 hover:text-indigo-600">Sửa laptop</a>
+        <a href="tai-khoan-ai.html" class="link-underline transition-colors duration-200 hover:text-indigo-600">Tài khoản AI</a>
+        <a href="cach-muon.html" class="link-underline transition-colors duration-200 hover:text-indigo-600">Cách mượn</a>
+        <a href="ve-nhom.html" class="link-underline transition-colors duration-200 hover:text-indigo-600">Về nhóm</a>
+        <a href="lien-he.html" class="link-underline transition-colors duration-200 hover:text-indigo-600">Liên hệ</a>
+        <span class="text-slate-300">Khoa CNTT · ĐH Khoa học Tự nhiên – ĐHQG-HCM</span>
+      </nav>
+    </div>
+  </footer>
+
+  <!-- ============ CART DRAWER ============ -->
+  <div id="cart-root" class="fixed inset-0 z-50 hidden" role="dialog" aria-modal="true" aria-labelledby="cart-title">
+    <div id="cart-overlay" class="absolute inset-0 bg-slate-900/40 opacity-0 backdrop-blur-[2px]"></div>
+
+    <div id="cart-panel" class="absolute inset-y-0 right-0 flex w-full max-w-[480px] translate-x-full flex-col bg-white shadow-2xl">
+
+      <header class="flex h-16 shrink-0 items-center justify-between gap-3 border-b border-slate-200/70 px-5">
+        <div class="flex items-baseline gap-2.5">
+          <h2 id="cart-title" class="text-[15px] font-semibold text-slate-900">Giỏ thuê</h2>
+          <span id="cart-count-label" class="text-[12px] text-slate-400">0 món</span>
+        </div>
+        <button type="button" id="cart-close" class="-mr-2 rounded-lg p-2 text-slate-500 transition-colors duration-200 hover:bg-slate-100 hover:text-slate-900">
+          <span class="sr-only">Đóng giỏ thuê</span>
+          <svg class="h-[18px] w-[18px]" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#i-x"/></svg>
+        </button>
+      </header>
+
+      <div id="cart-body" class="thin-scroll flex-1 overflow-y-auto px-5">
+
+        <!-- STEP 1 -->
+        <section id="cart-step-items" class="py-5">
+          <div id="cart-items"></div>
+
+          <div id="cart-empty" class="hidden py-14 text-center">
+            <p class="text-[14px] font-medium text-slate-900">Giỏ thuê đang trống</p>
+            <p class="mx-auto mt-1.5 max-w-[30ch] text-[13px] leading-relaxed text-slate-500">Chọn một thiết bị trong danh mục để bắt đầu.</p>
+            <button type="button" id="cart-empty-action" class="btn btn-secondary btn-sm mt-5">Xem danh mục</button>
+          </div>
+
+          <div id="cart-controls" class="mt-5 space-y-5 border-t border-slate-200/70 pt-5">
+            <div>
+              <label for="rental-days" class="field-label">Thời hạn thuê</label>
+              <select id="rental-days" class="field">
+                <option value="1">1 ngày</option>
+                <option value="3">3 ngày</option>
+                <option value="7">7 ngày</option>
+              </select>
+              <p class="hint">Áp dụng cho thiết bị tính phí theo ngày. Combo và bộ pin tính một lần.</p>
+            </div>
+
+            <div>
+              <label for="promo-input" class="field-label">Mã giảm giá</label>
+              <div class="flex gap-2">
+                <input id="promo-input" type="text" class="field uppercase" placeholder="SV10" autocomplete="off" aria-describedby="promo-msg">
+                <button type="button" id="promo-apply" class="btn btn-secondary btn-sm shrink-0">Áp dụng</button>
+              </div>
+              <p id="promo-msg" class="hint">Nhập mã ưu đãi sinh viên (VD: <span class="font-medium text-slate-600">SV10</span> — giảm 10% tiền thuê).</p>
+            </div>
+
+            <dl id="totals" class="space-y-2 border-t border-slate-200/70 pt-4 text-[13px]">
+              <div class="flex items-center justify-between gap-4">
+                <dt class="text-slate-500">Tiền thuê</dt>
+                <dd id="total-rent" class="font-medium tabular-nums text-slate-900">0đ</dd>
+              </div>
+              <div id="total-discount-row" class="hidden flex items-center justify-between gap-4">
+                <dt class="text-slate-500">Giảm giá <span id="discount-code" class="text-slate-400"></span></dt>
+                <dd id="total-discount" class="font-medium tabular-nums text-indigo-600">0đ</dd>
+              </div>
+              <div class="flex items-baseline justify-between gap-4 border-t border-slate-200/70 pt-2.5">
+                <dt class="text-[13px] font-medium text-slate-900">Tổng thanh toán</dt>
+                <dd id="total-grand" class="text-[15px] font-semibold tabular-nums text-slate-900">0đ</dd>
+              </div>
+            </dl>
+          </div>
+        </section>
+
+        <!-- STEP 2 -->
+        <section id="cart-step-checkout" class="hidden py-5">
+          <form id="checkout-form" novalidate>
+            <div class="space-y-4">
+              <div>
+                <label for="cust-student-id" class="field-label">Mã số sinh viên</label>
+                <input id="cust-student-id" type="text" required inputmode="numeric" class="field" placeholder="23123456" autocomplete="off">
+              </div>
+
+              <div>
+                <label for="cust-name" class="field-label">Họ tên người thuê</label>
+                <input id="cust-name" type="text" required class="field" placeholder="Nguyễn Văn A" autocomplete="name">
+              </div>
+
+              <div class="grid gap-4 sm:grid-cols-2">
+                <div>
+                  <label for="cust-phone" class="field-label">Số điện thoại</label>
+                  <input id="cust-phone" type="tel" required class="field" placeholder="0901234567" autocomplete="tel">
+                </div>
+                <div>
+                  <label for="cust-location" class="field-label">Điểm hẹn</label>
+                  <input id="cust-location" type="text" required class="field" placeholder="VD: Sảnh tòa nhà I" autocomplete="off">
+                </div>
+              </div>
+
+              <div>
+                <label for="cust-payment" class="field-label">Phương thức thanh toán</label>
+                <select id="cust-payment" class="field">
+                  <option value="Tiền mặt khi nhận">Tiền mặt khi nhận thiết bị</option>
+                  <option value="Ví điện tử (MoMo / ZaloPay)">Ví điện tử (MoMo / ZaloPay)</option>
+                  <option value="Chuyển khoản ngân hàng">Chuyển khoản ngân hàng</option>
+                </select>
+              </div>
+
+              <label for="rental-agreement" class="flex cursor-pointer items-start gap-2.5 rounded-xl border border-slate-200 p-3.5 transition-colors duration-200 hover:bg-slate-50">
+                <input id="rental-agreement" type="checkbox" required class="mt-0.5 h-4 w-4 shrink-0 accent-indigo-600">
+                <span class="text-[12px] leading-relaxed text-slate-600">
+                  Tôi xác nhận tình trạng thiết bị khi nhận và đồng ý hoàn trả đúng thời hạn tại điểm hẹn đã chọn.
+                </span>
+              </label>
+            </div>
+          </form>
+
+          <button type="button" id="back-to-items" class="mt-5 inline-flex items-center gap-1.5 text-[12.5px] font-medium text-slate-500 transition-colors duration-200 hover:text-slate-900">
+            <span aria-hidden="true">←</span> Quay lại giỏ thuê
+          </button>
+        </section>
+
+        <!-- STEP 3 -->
+        <section id="cart-step-success" class="hidden py-10 text-center">
+          <span class="mx-auto grid h-12 w-12 place-items-center rounded-full bg-indigo-50 text-indigo-600 transition-transform duration-300 hover:scale-110">
+            <svg class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#i-check"/></svg>
+          </span>
+          <h3 class="mt-4 text-[17px] font-semibold text-slate-900">Đã tạo yêu cầu thuê thành công</h3>
+          <p class="mx-auto mt-1.5 max-w-[34ch] text-[13px] leading-relaxed text-slate-500">
+            Yêu cầu của bạn đã được ghi nhận. Vui lòng kiểm tra lại thông tin nhận thiết bị bên dưới.
+          </p>
+
+          <div id="order-receipt" class="mt-6 rounded-xl border border-slate-200 text-left"></div>
+        </section>
+      </div>
+
+      <footer id="cart-footer" class="shrink-0 border-t border-slate-200/70 bg-white px-5 py-4">
+        <div class="flex items-baseline justify-between gap-4">
+          <span class="text-[12.5px] text-slate-500">Tổng thanh toán</span>
+          <span id="footer-total" class="text-[16px] font-semibold tabular-nums text-slate-900">0đ</span>
+        </div>
+        <button type="button" id="cart-primary" class="btn btn-primary mt-3 w-full">
+          Tiếp tục nhập thông tin
+          <svg class="h-4 w-4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#i-arrow-right"/></svg>
+        </button>
+      </footer>
+    </div>
+  </div>
+
+  <!-- ============ TOAST ============ -->
+  <div id="toast" class="pointer-events-none fixed bottom-5 left-1/2 z-[60] flex w-[calc(100%-2rem)] max-w-[420px] -translate-x-1/2 items-center gap-4 rounded-xl bg-slate-900 px-4 py-3 text-white shadow-xl" role="status" aria-live="polite">
+    <p id="toast-message" class="min-w-0 flex-1 text-[13px] leading-snug"></p>
+    <button type="button" id="toast-action" class="pointer-events-auto shrink-0 rounded-md px-2 py-1 text-[12.5px] font-semibold text-indigo-300 transition-colors duration-200 hover:bg-white/10 hover:text-white"></button>
+  </div>
+
+  <!-- Custom Script -->
+  <script src="script.js"></script>
+</body>
+</html>
